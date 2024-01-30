@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  database:
+    image: postgres
+    container_name: db-postgres
+    restart: always
+    ports:
+      - "5435:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=bia220614
+      - POSTGRES_DB=database
+    volumes:
+      - C:/Users/neand/projeto_api_checklist/checklist/db:/var/lib/postgresql/data
